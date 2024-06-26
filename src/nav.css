@@ -1,0 +1,19 @@
+nav{
+  display: flex;
+  gap: 40px;
+  background-color: rgb(83, 122, 231);
+  color: white;
+  align-items: center;
+  padding: 6px 30px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-link{
+  margin-right: auto;
+  font-size: 3rem;
+  font-weight: 300;
+}
+

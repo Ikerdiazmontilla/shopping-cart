@@ -1,0 +1,27 @@
+
+Learn how to fetch items from fakestore API
+Theme: mens clothing
+
+
+
+
+Components: 
+NavBar on the top >
+  Link to homepage
+  Link to shopPage
+  Search feature
+  Link to cart
+
+Main >
+  top part: 
+    background picture
+    Button with link to shopPage
+    Fancy text
+  
+  Featured items: 
+    title
+    Cards with link to each item >
+      picture that zooms when you hover
+      Product name
+      Price
+
