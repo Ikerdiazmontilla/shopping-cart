@@ -7,8 +7,8 @@ function Featured({data}) {
   return(
     <div className="featured-products">
       <h2>Featured Products</h2>
-      <div className="card-wrapper">
-        {data.slice(1,5).map((product) => <Card product={product} key={product.title}/>)}
+      <div className="card-wrapper" role="wrapper">
+        {data.slice(3,7).map((product) => <Card product={product} key={product.title}/>)}
       </div>
     </div>
   )

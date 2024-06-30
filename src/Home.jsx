@@ -2,19 +2,24 @@ import Featured from './Featured';
 import './Home.css'
 import Nav from './Nav';
 import { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [ data, setData ] = useState([]);
 
   useEffect(() => {
     fetch('https://api.escuelajs.co/api/v1/products')
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json()
+    })
     .then((data) => {
       const clothes = data.filter((product) => product.category.name === "Clothes")
       setData(clothes);
-      console.log(data)
       console.log(clothes)
+    })
+    .catch((error) => {
+      console.log(error)
+      alert('There was a problem fetching the items')
     })
   }, [])
 
@@ -27,7 +32,7 @@ function Home() {
       <div className="main-home">
         <div className="wrapper">
           <p>Upgrade your style</p>
-          <a href="" className='shop-now'>Shop Now</a>
+          <Link to={'shop'} className='shop-now'>Shop Now</Link>
         </div>
       </div>
       <Featured data={data}/>

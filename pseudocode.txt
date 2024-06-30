@@ -1,7 +1,5 @@
-
-Learn how to fetch items from fakestore API
 Theme: mens clothing
-
+If api still not work, put backup api
 
 
 
