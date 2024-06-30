@@ -57,32 +57,3 @@ h2{
   gap: 5vw;
 }
 
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 15vw;
-  border-radius: 6px;
-  background-color: rgb(167, 164, 164);
-  color: white;
-  transition: transform 0.3s;
-}
-
-.card:hover{
-  transform: scale(1.1);
-}
-
-.product-info{
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.name{
-  font-weight: 500;
-}
-
-.card img{
-  border-radius: 6px;
-}

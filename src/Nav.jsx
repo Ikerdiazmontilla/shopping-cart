@@ -1,17 +1,17 @@
 import './nav.css'
+import { Link } from 'react-router-dom';
 function Nav() {
 
   
   return(
     <nav role="menubar">
-      <a role="heading" className='home-link'>Urban Vibes</a>
-      <a href="">Shop</a>
-      <a href="">Search</a>
-      <a href="">Cart</a>
+      <Link to={'/'} role="heading" className='home-link'>Urban Vibes</Link>
+      <Link to={'shop'}>Shop</Link>
+      <Link >Search</Link>
+      <Link >Cart</Link>
     </nav>
   )
 }
-
 
 
 export default Nav;  
