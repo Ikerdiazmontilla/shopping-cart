@@ -5,6 +5,8 @@ import Shop from './shop/Shop';
 import Nav from './Nav';
 import './index.css';
 import mockData from './mockData';
+import ErrorPage from './ErrorPage';
+import Product from './shop/Product';
 
 
 function App() {
@@ -16,13 +18,14 @@ function App() {
       return response.json()
     })
     .then((data) => {
+      console.log(data)
       const clothes = data.filter((product) => product.category.name === "Clothes")
       setData(clothes);
-      console.log('hello')
+      // console.log(clothes)
     })
     .catch((error) => {
       console.log(error)
-      alert('There was a problem fetching the items')
+      // alert('There was a problem fetching the items')
       setData(mockData)
     })
   }, [])
@@ -51,7 +54,9 @@ const router = (data) => createBrowserRouter([
     children: [
       { path: '/', element: <Home data={data}/> },
       { path: 'shop', element: <Shop data={data}/> },
-    ]
+      { path: 'shop/:id', element: <Product data={data}/> },
+    ],
+    errorElement: <ErrorPage/>
   },
 ])
 

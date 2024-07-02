@@ -25,6 +25,10 @@ Main >
 
 
 
+https://api.escuelajs.co/api/v1/products
+  const imgUrl = product.images[0].replace(/(^\["|"]$|^"|"$)/g, '')
+      const clothes = data.filter((product) => product.category.name === "Clothes")
 
-
-export default Nav;  
+https://fakestoreapi.com/products 
+const clothes = data.filter((product) => product.category === "men's clothing" || product.category === "women's clothing")
+  const imgUrl = product.image.replace(/(^\["|"]$|^"|"$)/g, '')
