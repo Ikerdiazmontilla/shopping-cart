@@ -1,0 +1,93 @@
+.product-details{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2vh 5vw;
+  padding-top: 15vh;
+  gap: 5vw;
+}
+
+.product-details img {
+  max-height: 60vh;
+  border-radius: 6px;
+}
+
+.product{
+  max-width: 40%;
+}
+
+.info{
+  display: flex;
+  /* margin-bottom: 10px; */
+}
+
+.info h2{
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.description{
+  color: rgb(48, 46, 46);
+  margin-bottom: 10px;
+}
+
+.info .price{
+  color: green;
+  font-size: 2rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.quantity input{
+  max-width: 80px;
+  text-align: center;
+  padding: 6px;
+  height: 50px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+.quantity input:focus{
+  border: 2px solid rgb(83, 122, 231);
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity button {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 3rem;
+}
+
+
+.buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.buttons .button {
+  padding: 0px 12px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgb(83, 122, 231);
+  border-radius: 4px;
+  border: none;
+  height: 50px;
+  font-weight: 400;
+  display: grid;
+  place-content: center;
+}

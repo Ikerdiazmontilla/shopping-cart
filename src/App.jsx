@@ -11,6 +11,7 @@ import Product from './shop/Product';
 
 function App() {
   const [ data, setData ] = useState([]);
+  const [ loading, setLoading ] = useState(true)
 
   useEffect(() => {
     fetch('https://api.escuelajs.co/api/v1/products')
@@ -20,13 +21,18 @@ function App() {
     .then((data) => {
       console.log(data)
       const clothes = data.filter((product) => product.category.name === "Clothes")
-      setData(clothes);
-      // console.log(clothes)
+      if(clothes.length < 4) {
+        setData(mockData)
+      } else {
+        setData(clothes);
+      }
+      setLoading(false)
+      console.log('clothes', clothes)
     })
     .catch((error) => {
       console.log(error)
-      // alert('There was a problem fetching the items')
       setData(mockData)
+      setLoading(false)
     })
   }, [])
 
@@ -34,7 +40,7 @@ function App() {
 
   return (
     <>
-        <RouterProvider router={router(data)} />
+        <RouterProvider router={router(data, loading)} />
     </>
   )
 }
@@ -47,14 +53,14 @@ const Layout = () => {
   )
 }
 
-const router = (data) => createBrowserRouter([
+const router = (data, loading) => createBrowserRouter([
   {
     path: '/',
     element: <Layout/>,
     children: [
-      { path: '/', element: <Home data={data}/> },
-      { path: 'shop', element: <Shop data={data}/> },
-      { path: 'shop/:id', element: <Product data={data}/> },
+      { path: '/', element: <Home data={data} loading={loading}/>,  },
+      { path: 'shop', element: <Shop data={data} loading={loading}/> },
+      { path: 'shop/:id', element: <Product data={data} loading={loading}/> },
     ],
     errorElement: <ErrorPage/>
   },

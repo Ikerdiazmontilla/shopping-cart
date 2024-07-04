@@ -3,7 +3,8 @@ import './Home.css'
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types"
 
-function Home({data}) {
+function Home({data, loading}) {
+
   return (
     <>
       <div className="main-home">
@@ -12,13 +13,21 @@ function Home({data}) {
           <Link to={'shop'} className='shop-now'>Shop Now</Link>
         </div>
       </div>
+      {
+      loading ?
+        <div>
+          Loading...
+        </div>
+      :
       <Featured data={data}/>
+      }
     </>
   );
 }
 
 Home.propTypes = {
-  data : PropTypes.array.isRequired
+  data : PropTypes.array.isRequired,
+  loading : PropTypes.bool
 }
 
 export default Home;

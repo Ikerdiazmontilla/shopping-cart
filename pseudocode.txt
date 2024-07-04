@@ -24,6 +24,8 @@ Main >
       Price
 
 
+If quantity == 0 don't allow add to cart
+set timeout for fetching
 
 https://api.escuelajs.co/api/v1/products
   const imgUrl = product.images[0].replace(/(^\["|"]$|^"|"$)/g, '')
