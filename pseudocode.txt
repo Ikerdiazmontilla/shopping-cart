@@ -26,6 +26,7 @@ Main >
 
 If quantity == 0 don't allow add to cart
 set timeout for fetching
+Add cart component
 
 https://api.escuelajs.co/api/v1/products
   const imgUrl = product.images[0].replace(/(^\["|"]$|^"|"$)/g, '')

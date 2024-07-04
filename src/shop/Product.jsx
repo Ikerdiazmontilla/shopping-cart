@@ -13,7 +13,7 @@ function Product({data, loading, addToCart}) {
   if (!loading){
     productInfo = data.find((product => product.id === Number(id)));
     imgUrl = productInfo.images[0].replace(/(^\["|"]$|^"|"$)/g, '')
-    console.log('Data', productInfo)
+
   }
 
   function handleChange(event) {
@@ -21,7 +21,9 @@ function Product({data, loading, addToCart}) {
   }
 
   function handleDecrement() {
+    if(quantity > 0) {
     setQuantity(quantity - 1)
+    }
   }
 
   function handleIncrement() {
@@ -29,7 +31,10 @@ function Product({data, loading, addToCart}) {
   }
 
   function handleAdd() {
-    addToCart(id,quantity)
+    if(quantity > 0) {
+      console.log('added')
+      addToCart(id,quantity)
+    }
   }
 
 

@@ -90,4 +90,6 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   display: grid;
   place-content: center;
+  text-align: center;
+  padding: 6px;
 }
