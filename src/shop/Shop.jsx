@@ -1,6 +1,5 @@
 import Card from "../Card";
 import PropTypes from "prop-types"
-import './shop.css'
 
 function Shop ({data, loading}) {
 
