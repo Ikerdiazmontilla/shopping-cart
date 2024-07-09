@@ -1,6 +1,0 @@
-.card-wrapper{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  padding: 5vh 2vw;
-  /* padding-top: 4rem; */
-}

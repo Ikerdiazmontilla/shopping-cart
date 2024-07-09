@@ -21,7 +21,6 @@ function Shop ({data, loading}) {
 Shop.propTypes = {
   data : PropTypes.array.isRequired,
   loading : PropTypes.bool,
-
 }
 
 export default Shop

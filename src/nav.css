@@ -5,6 +5,8 @@ nav{
   color: white;
   align-items: center;
   padding: 6px 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 a {
   text-decoration: none;
@@ -17,3 +19,21 @@ a {
   font-weight: 500;
 }
 
+.cart-link{
+  position: relative;
+}
+
+.cart-decoration{
+  background-color: rgb(32, 199, 26);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: -9px;
+  right: -13px;
+
+}

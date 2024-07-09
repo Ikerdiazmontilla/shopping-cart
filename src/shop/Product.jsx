@@ -32,7 +32,6 @@ function Product({data, loading, addToCart}) {
 
   function handleAdd() {
     if(quantity > 0) {
-      console.log('added')
       addToCart(id,quantity)
     }
   }
